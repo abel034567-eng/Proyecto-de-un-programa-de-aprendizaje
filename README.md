@@ -1,6 +1,6 @@
 # 🧠 Quiz App con Panel de Administración
 
-![Imagen del proyecto](./public/img/Quiz_educativo.png)
+![Imagen del proyecto](./public/img/Quiz_Educativo.png)
 
 ## Índice
 - [Descripción](#descripción-del-proyecto)
