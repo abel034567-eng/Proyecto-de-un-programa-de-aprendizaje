@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de Administración</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 Panel de Administración</h1>
+    <p class="subtitle">Gestiona tus preguntas fácilmente</p>
+
+    <div class="actions">
+      <a href="/admin/new" class="btn primary">➕ Agregar pregunta</a>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Pregunta</th>
+            <th>Respuesta correcta</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% questions.forEach(q => { %>
+            <tr>
+              <td><%= q.questionText %></td>
+              <td><%= q.correctAnswer %></td>
+              <td>
+                <a href="/admin/edit/<%= q._id %>" class="btn small">✏️ Editar</a>
+                <a href="/admin/delete/<%= q._id %>" class="btn small danger">🗑️ Eliminar</a>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

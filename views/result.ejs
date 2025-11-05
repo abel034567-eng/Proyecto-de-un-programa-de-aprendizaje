@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultados del Quiz</title>
+  <link rel="stylesheet" href="/css/result.css">
+</head>
+<body>
+  <div class="result-container">
+    <h1>Resultados</h1>
+
+    <div class="score-section">
+      <h2><%= score %> / <%= total %> correctas</h2>
+      <p class="message">
+        <% if (score === total) { %>
+          🌟 ¡Excelente trabajo! Dominaste todas las preguntas.
+        <% } else if (score >= total / 2) { %>
+          👍 ¡Bien hecho! Aún puedes mejorar.
+        <% } else { %>
+          💡 No te rindas, sigue practicando.
+        <% } %>
+      </p>
+    </div>
+
+    <div class="answers-section">
+      <h3>Revisión de tus respuestas:</h3>
+
+      <% answers.forEach((ans, index) => { %>
+        <div class="answer-card <%= ans.isCorrect ? 'correct' : 'incorrect' %>">
+          <div class="question-text">
+            <%= index + 1 %>. <%= ans.question %>
+          </div>
+          <div class="answer-info">
+            <span>
+              <strong>Tu respuesta:</strong> <%= ans.selected %>
+            </span>
+            <span>
+              <% if (ans.isCorrect) { %>
+                ✅ Correcta
+              <% } else { %>
+                ❌ Correcta: <%= ans.correctAnswer %>
+              <% } %>
+            </span>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+
+    <button onclick="window.location.href='/'" class="home-btn">Volver al inicio</button>
+  </div>
+</body>
+</html>

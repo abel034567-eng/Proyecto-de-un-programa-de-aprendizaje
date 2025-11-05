@@ -1,0 +1,70 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.result-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 30px;
+  width: 600px;
+  text-align: center;
+}
+
+.score-section h2 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.message {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.answers-section {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.answer-card {
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  background: #f7f7f7;
+}
+
+.answer-card.correct {
+  border-left: 6px solid #28a745;
+}
+
+.answer-card.incorrect {
+  border-left: 6px solid #dc3545;
+}
+
+.answer-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+.home-btn {
+  margin-top: 25px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.home-btn:hover {
+  background-color: #0056b3;
+}
